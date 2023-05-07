@@ -1,5 +1,5 @@
 # Update Layout Demo
-Example repo showing bug in WinUI3 where UpdateLayout does not redraw.
+Example project showing a bug in WinUI3 where UpdateLayout does not redraw.
 
 1. Build and run the app.
 2. With the ToggleSwitch set to On (i.e. Use UpdatLayout) try varying the ArcEnd slider. Notice there is no effect on the panel.
