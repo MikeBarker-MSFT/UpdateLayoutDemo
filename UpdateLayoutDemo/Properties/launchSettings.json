@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "UpdateLayoutDemo (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "UpdateLayoutDemo (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

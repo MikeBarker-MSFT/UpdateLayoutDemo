@@ -1,0 +1,78 @@
+<Window
+    x:Class="UpdateLayoutDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:UpdateLayoutDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        >
+
+        <ToggleSwitch
+            x:Name="UseUpdateLayoutToggle"
+            Header="Use UpdateLayout"
+            IsOn="True"
+            OnContent="Use UpdatLayout."
+            OffContent="Use InvalidateMeasure and InvalidateArrange."
+            />
+
+        <Slider
+            x:Name="ArcEndSlider"
+            Header="ArcEnd"
+            Maximum="0"
+            Minimum="-4.7123889803846898576939650749193"
+            SmallChange="0.08726646259971647884618453842443"
+            StepFrequency="1.5707963267948966192313216916398"
+            Value="0"
+            />
+
+        <Border
+            BorderBrush="DarkRed"
+            BorderThickness="2"
+            >
+            <local:CircularPanel
+                ArcStart="-6.283185307179586476925286766559"
+                ArcEnd="{x:Bind ArcEndSlider.Value, Mode=OneWay}"
+                UseUpdateLayout="{x:Bind (x:Boolean)UseUpdateLayoutToggle.IsOn, Mode=OneWay}"
+                >
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Red"
+                    />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Orange"
+                    />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Yellow"
+                    />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Green"
+                    />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Blue"
+                    />
+                <Ellipse
+                    Width="20"
+                    Height="20"
+                    Fill="Indigo"
+                    />
+            </local:CircularPanel>
+        </Border>
+    </StackPanel>
+
+</Window>
