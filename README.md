@@ -1,4 +1,4 @@
-# UpdateLayoutDemo
+# Update Layout Demo
 Example repo showing bug in WinUI3 where UpdateLayout does not redraw.
 
 1. Build and run the app.
